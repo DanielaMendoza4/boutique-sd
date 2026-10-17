@@ -1,0 +1,98 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8d8f6;
+    color: #6e6e6e;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #eb8e8e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #f5a9ca; 
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #D085A5; /* Palo Rosa */
+    box-shadow: 0 0 5px rgba(208, 133, 165, 0.6);
+}
+
+button.custom-btn {
+    background-color: #D085A5; /* Palo Rosa */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.custom-btn:hover {
+    background-color: #e18caa; /* Sombra más clara de palo rosa */
+}
+
+/* Estilo de Mensajes de Error */
+.alert {
+    background-color: #F8D7DA;
+    color: #721C24;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.alert.active {
+    display: block;
+}
+
+/* Estilo para enlaces */
+a {
+    color: #D085A5; /* Palo Rosa */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    color: #777;
+}
