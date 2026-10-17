@@ -1,0 +1,11 @@
+.custom-btn{
+    background-color: #ffe033 !important;
+    color: white;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8d8f6;
+    color: #6e6e6e;
+    margin: 0;
+    padding: 0;
+}

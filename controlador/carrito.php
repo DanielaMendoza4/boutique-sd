@@ -37,7 +37,6 @@ if (!isset($_SESSION['usuario'])) {
                     <th>Precio</th>
                     <th>Cantidad</th>
                     <th>Total</th>
-                    <th></th>
                 </tr>
               </thead>";
         echo "<tbody>";
@@ -47,20 +46,14 @@ if (!isset($_SESSION['usuario'])) {
         foreach ($_SESSION['carrito'] as $producto_id) {
             
             $producto = getProductoById($producto_id['id']);
-
-            if (!$producto) {
-                continue;
-            }
-
             $producto_total = $producto['precio'] * $producto_id['cantidad'];
             $total += $producto_total;
 
             echo "<tr>";
-            echo "<td>" . htmlspecialchars($producto['nombre'], ENT_QUOTES, 'UTF-8') . "</td>";
+            echo "<td>" . $producto['nombre'] . "</td>";
             echo "<td>" . number_format($producto['precio'], 2) . " USD</td>";
             echo "<td>" . $producto_id['cantidad'] . "</td>";
             echo "<td>" . number_format($producto_total, 2) . " USD</td>";
-            echo "<td><a href='../modelo/eliminar_carrito.php?id=" . $producto_id['id'] . "' class='btn btn-sm btn-danger'>Eliminar</a></td>";
             echo "</tr>";
         }
 
@@ -72,6 +65,7 @@ if (!isset($_SESSION['usuario'])) {
 
         
         echo "<div class='mt-3'>
+                <a href='checkout.php' class='btn btn-success'>Proceder al pago</a>
                 <a href='../vista/index.php' class='btn btn-secondary'>Seguir comprando</a>
               </div>";
 
