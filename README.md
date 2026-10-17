@@ -49,7 +49,7 @@ Pasos
 Clona el repositorio dentro de la carpeta htdocs de XAMPP:
 bash
    cd C:/xampp/htdocs
-   git clone https://github.com/TU-USUARIO/boutique-sd.git boutique
+  (https://github.com/DanielaMendoza4/boutique-sd.git)
 Inicia Apache y MySQL desde el Panel de Control de XAMPP.
 Crea la base de datos:
 Entra a http://localhost/phpmyadmin.
